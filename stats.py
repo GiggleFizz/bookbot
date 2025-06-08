@@ -7,4 +7,11 @@ def get_word_count(book):
 
 def get_character_count(book):
     lowered_letters = book.lower()
-    
+    letter_counts = {}
+    for letter in lowered_letters:
+        if letter in letter_counts:
+            letter_counts[letter] += 1
+        else:
+            letter_counts[letter] = 1    
+
+    return letter_counts
